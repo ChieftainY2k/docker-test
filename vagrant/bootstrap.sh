@@ -4,13 +4,19 @@
 #sudo apt-get install -y ansible
 
 # install the NEWEST ansible
-sudo apt-get -y install software-properties-common
-sudo apt-add-repository -y ppa:ansible/ansible
-sudo apt-get -y update
-sudo apt-get -y install ansible
+#apt-get -y install software-properties-common
+#apt-add-repository -y ppa:ansible/ansible
+#apt-get -y update
+#apt-get -y install ansible
 
-sudo apt-get -y install apt-transport-https ca-certificates
-sudo apt-key -y adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+apt-get install -y mc joe git multitail screen
+
+curl -sSL https://get.docker.com/ | sh
+
+#sudo usermod -aG docker your-user
+
+#sudo apt-get -y install apt-transport-https ca-certificates
+#sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
 #mkdir /vagrant/tmp/
 #

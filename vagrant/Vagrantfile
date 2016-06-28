@@ -19,8 +19,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.define "docker-test" do |node|
 
-        node.vm.box = "ubuntu/trusty32"
-        node.vm.network "forwarded_port", guest: 80, host: 8000
+        node.vm.box = "ubuntu/trusty64"
+        node.vm.network "forwarded_port", guest: 80, host: 5000
         node.vm.hostname = "docker-test.local"
 
         node.vm.synced_folder "../", "/var/www/docker-test"
