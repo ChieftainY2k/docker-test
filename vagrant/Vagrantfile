@@ -26,11 +26,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.synced_folder "../", "/var/www/docker-test"
         node.vm.provision :shell, path: "bootstrap.sh"
 
-#        node.hostmanager.aliases = [
-#            "mainsite-new.de.codete.local",
-#            "phpmyadmin.codete.local"
-#        ]
-
     end
 
 
