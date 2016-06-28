@@ -1,0 +1,7 @@
+.idea
+nbproject/
+vendor/
+web/.htaccess
+web/bundles
+.vagrant
+vagrant/tmp
