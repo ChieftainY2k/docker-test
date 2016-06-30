@@ -25,7 +25,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.network "forwarded_port", guest: 5000, host: 15000
         node.vm.hostname = "docker-test.local"
 
+        # http://stackoverflow.com/questions/31616383/vagrant-mount-error-after-installing-docker
+
         node.vm.synced_folder "../", "/var/www/docker-test"
+
         node.vm.provision :shell, path: "bootstrap.sh"
 
     end
