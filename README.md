@@ -15,3 +15,15 @@ Successfully tested with:
 * vagrant box update
 * vagrant up
 * vagrant ssh
+
+**Run a simple container**
+* docker run -it busybox sh
+* (type "exit" to exit the container process) 
+
+**Setup an example app**
+* git clone https://github.com/webdevops/php-docker-boilerplate/
+* cd php-docker-boilerplate/
+* cp docker-compose.development.yml docker-compose.yml
+* docker-compose up
+* (press CTRL-C to stop containers od use "-d" option to run in background)
+ 
