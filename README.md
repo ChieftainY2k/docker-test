@@ -1,4 +1,5 @@
 **What is it ?**
+
 This is a simple config to setup and run vagrant box with docker inside.
 
 Successfully tested with:
