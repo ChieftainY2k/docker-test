@@ -20,12 +20,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define "docker-test" do |node|
 
         node.vm.box = "ubuntu/trusty64"
-        node.vm.network "forwarded_port", guest: 80, host: 10080
-        node.vm.network "forwarded_port", guest: 8983, host: 18983
+        node.vm.network "forwarded_port", guest: 80, host: 10080 #website
+        node.vm.network "forwarded_port", guest: 8000, host: 18000 #website
+        node.vm.network "forwarded_port", guest: 8001, host: 18001 #phpmyadmin
+        node.vm.network "forwarded_port", guest: 1080, host: 11080 #mailcatcher
+        node.vm.network "forwarded_port", guest: 8983, host: 18983 #SOLR
+        node.vm.network "forwarded_port", guest: 18983, host: 18983 #SOLR
+        node.vm.network "forwarded_port", guest: 3306, host: 13306 #MySQL
         node.vm.network "forwarded_port", guest: 5000, host: 15000
         node.vm.hostname = "docker-test.local"
-
-        # http://stackoverflow.com/questions/31616383/vagrant-mount-error-after-installing-docker
 
         node.vm.synced_folder "../", "/var/www/docker-test"
 

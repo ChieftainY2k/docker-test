@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-sudo apt-get install -y mc joe git multitail screen nmap python-pip htop iotop jnettop elinks
+sudo apt-get install -y mc joe git multitail screen nmap python-pip htop iotop jnettop elinks pydf
 
 
 curl -sSL https://get.docker.com/ | sh
@@ -19,3 +20,6 @@ curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machin
 
 # http://stackoverflow.com/questions/31616383/vagrant-mount-error-after-installing-docker
 sudo apt-get -y install linux-headers-$(uname -r)
+
+# BOLERPLATES:
+# https://github.com/webdevops/php-docker-boilerplate
