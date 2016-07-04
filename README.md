@@ -5,4 +5,5 @@
  
 **Launch**
 * cd vagrant
+* vagrant box update
 * vagrant up
